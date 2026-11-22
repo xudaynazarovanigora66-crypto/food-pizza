@@ -151,6 +151,19 @@
   };
 
   document.addEventListener("DOMContentLoaded", async () => {
+    const loader = document.createElement("div");
+    loader.className = "page-loader";
+    loader.innerHTML = '<div class="loader-content"><img src="/images/pizza1.webp" alt="Loading"><span>Pizza House</span></div>';
+    document.body.prepend(loader);
+    const backTop = document.createElement("button");
+    backTop.className = "back-to-top";
+    backTop.type = "button";
+    backTop.setAttribute("aria-label", "Yuqoriga qaytish");
+    backTop.innerHTML = "↑";
+    document.body.append(backTop);
+    backTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    window.addEventListener("scroll", () => backTop.classList.toggle("is-visible", window.scrollY > 480), { passive: true });
+
     const includes = Array.from(document.querySelectorAll("[data-include]"));
     await Promise.all(includes.map(async (container) => {
       const response = await fetch(container.dataset.include);
@@ -186,5 +199,9 @@
     applyTranslations();
     updateHeaderCart();
     window.addEventListener("pizza:cart-change", updateHeaderCart);
+    window.setTimeout(() => {
+      loader.classList.add("is-hidden");
+      window.setTimeout(() => loader.remove(), 700);
+    }, 900);
   });
 })();

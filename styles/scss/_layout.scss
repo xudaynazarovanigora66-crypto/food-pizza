@@ -1,4 +1,14 @@
-.site-header { position: relative; z-index: 5; background: #fff; }
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 30;
+  background: rgba(255, 255, 255, .96);
+  box-shadow: 0 6px 24px rgba(44, 35, 27, .06);
+  backdrop-filter: blur(14px);
+}
+body { padding-top: 82px; }
 .header-inner {
   min-height: 82px;
   display: flex;
@@ -56,6 +66,7 @@
 .footer-copy { color: #aaa195; }
 
 @media (max-width: 800px) {
+  body { padding-top: 72px; }
   .header-inner { min-height: 72px; gap: 12px; }
   .menu-toggle {
     display: flex;

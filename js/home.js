@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function render() {
     container.replaceChildren();
-    products.forEach((product) => {
+    products.slice(0, 4).forEach((product) => {
       const card = document.createElement("article");
       card.className = "feature-card";
       const image = document.createElement("img");
@@ -39,4 +39,28 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   render();
   window.addEventListener("pizza:language-change", render);
+
+  const hero = document.querySelector(".hero");
+  const heroPizza = document.querySelector("[data-hero-pizza]");
+  const heroImages = [
+    "/images/pizza1.webp", "/images/pizza2.webp", "/images/pizza3.webp",
+    "/images/pizza4.webp", "/images/pizza5.webp", "/images/pizza6.webp"
+  ];
+  let heroIndex = 0;
+  window.setInterval(() => {
+    heroIndex = (heroIndex + 1) % heroImages.length;
+    if (heroPizza) {
+      heroPizza.classList.add("is-changing");
+      window.setTimeout(() => {
+        heroPizza.src = heroImages[heroIndex];
+        heroPizza.classList.remove("is-changing");
+      }, 320);
+    }
+    if (hero) {
+      hero.style.setProperty("--hero-image", `url("${heroImages[heroIndex]}")`);
+      hero.classList.remove("hero-bg-change");
+      void hero.offsetWidth;
+      hero.classList.add("hero-bg-change");
+    }
+  }, 2000);
 });

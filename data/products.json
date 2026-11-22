@@ -16,13 +16,70 @@
     "id": "classic",
     "price": 59000,
     "image": "/images/pizza2.webp",
-    "name": {
-      "uz": "Klassik pitsa",
-      "ru": "Классическая пицца"
-    },
-    "description": {
-      "uz": "Yangi masalliqlar va yumshoq mozzarella",
-      "ru": "Свежие ингредиенты и нежная моцарелла"
-    }
+    "name": { "uz": "Klassik pitsa", "ru": "Классическая пицца" },
+    "description": { "uz": "Yangi masalliqlar va yumshoq mozzarella", "ru": "Свежие ингредиенты и нежная моцарелла" }
+  },
+  {
+    "id": "margherita",
+    "price": 62000,
+    "image": "/images/pizza3.webp",
+    "name": { "uz": "Margherita", "ru": "Маргарита" },
+    "description": { "uz": "Pomidor, mozzarella va rayhon", "ru": "Томаты, моцарелла и базилик" }
+  },
+  {
+    "id": "mushroom",
+    "price": 72000,
+    "image": "/images/pizza4.webp",
+    "name": { "uz": "Qo‘ziqorinli", "ru": "Грибная" },
+    "description": { "uz": "Qo‘ziqorin, mozzarella va zaytun", "ru": "Грибы, моцарелла и оливки" }
+  },
+  {
+    "id": "italian",
+    "price": 79000,
+    "image": "/images/pizza5.webp",
+    "name": { "uz": "Italian pizza", "ru": "Итальянская" },
+    "description": { "uz": "Kolbasa, pomidor va achchiq sous", "ru": "Колбаса, томаты и острый соус" }
+  },
+  {
+    "id": "spicy",
+    "price": 75000,
+    "image": "/images/pizza6.webp",
+    "name": { "uz": "Achchiq pizza", "ru": "Острая пицца" },
+    "description": { "uz": "Achchiq qalampir va mol go‘shti", "ru": "Острый перец и говядина" }
+  },
+  {
+    "id": "supreme",
+    "price": 85000,
+    "image": "/images/pizza7.webp",
+    "name": { "uz": "Supreme", "ru": "Суприм" },
+    "description": { "uz": "Tovuq, kolbasa, sabzavotlar", "ru": "Курица, колбаса и овощи" }
+  },
+  {
+    "id": "tomato",
+    "price": 68000,
+    "image": "/images/pizza8.webp",
+    "name": { "uz": "Pomidorli", "ru": "Томатная" },
+    "description": { "uz": "Pomidor, rayhon va parmesan", "ru": "Томаты, базилик и пармезан" }
+  },
+  {
+    "id": "basil",
+    "price": 73000,
+    "image": "/images/pizza9.webp",
+    "name": { "uz": "Rayhonli pizza", "ru": "Пицца с базиликом" },
+    "description": { "uz": "Mozzarella, rayhon, o‘simlik sousi", "ru": "Моцарелла, базилик и овощной соус" }
+  },
+  {
+    "id": "four-cheese",
+    "price": 88000,
+    "image": "/images/pizza10.jpg",
+    "name": { "uz": "4 xil pishloqli", "ru": "Четыре сыра" },
+    "description": { "uz": "Mozzarella, cheddar, dorblu, parmesan", "ru": "Моцарелла, чеддер, дорблю, пармезан" }
+  },
+  {
+    "id": "special",
+    "price": 92000,
+    "image": "/images/pizza11.jpg",
+    "name": { "uz": "Pizza House Special", "ru": "Особая Pizza House" },
+    "description": { "uz": "Chefning maxsus pitsasi", "ru": "Фирменная пицца шеф-повара" }
   }
 ]

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     products.forEach((product) => {
       const card = document.createElement("article");
       card.className = "favorite-card";
-      card.innerHTML = `<div class="favorite-image-slot" data-pizza-image aria-hidden="true"></div><h2>${product.name[lang]}</h2><p>${product.description[lang]}</p><div><strong>${money(product.price)}</strong><button type="button" class="button button-primary" data-add="${product.id}">${PizzaApp.translate("buy.add")}</button></div>`;
+      card.innerHTML = `<div class="favorite-image-slot" data-pizza-image aria-hidden="true"><img src="${product.image}" alt="${product.name[lang]}"></div><h2>${product.name[lang]}</h2><p>${product.description[lang]}</p><div><strong>${money(product.price)}</strong><button type="button" class="button button-primary" data-add="${product.id}">${PizzaApp.translate("buy.add")}</button></div>`;
       card.querySelector("[data-add]").addEventListener("click", () => PizzaApp.addToCart(product.id));
       list.append(card);
     });
